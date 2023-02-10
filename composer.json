@@ -1,0 +1,21 @@
+{
+  "name": "smeedijzer-online/gf-entries-editor-role-access",
+  "type": "wordpress-plugin",
+  "description": "Give users with the Editor role the Gravity Forms capabilities to control 'entries' (view, edit, delete, export) and 'entry notes' (view, edit).",
+  "homepage": "https://github.com/smeedijzer-online/gf-entries-editor-role-access",
+  "authors": [
+    {
+      "name": "Smeedijzer Internet",
+      "homepage": "https://smeedijzer.net"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/smeedijzer-online/gf-entries-editor-role-access/issues"
+  },
+  "require": {
+    "php": ">=7.4"
+  }
+}
