@@ -15,11 +15,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'GF_Entries_Editor_Role_Access' ) ) {
 	class GF_Entries_Editor_Role_Access {
 
+		private static $_instance;
+
 		/**
 		 * Constructor
 		 */
 		public function __construct() {
 			$this->setup_actions();
+		}
+
+		/**
+		 * @return GF_Entries_Editor_Role_Access
+		 */
+		public static function instance(): \GF_Entries_Editor_Role_Access {
+			if ( ! isset( self::$_instance ) && ! ( self::$_instance instanceof self ) ) {
+				self::$_instance = new GF_Entries_Editor_Role_Access();
+			}
+			return self::$_instance;
 		}
 
 		/**
@@ -98,5 +110,5 @@ if ( ! class_exists( 'GF_Entries_Editor_Role_Access' ) ) {
 	}
 
 	// instantiate the plugin class
-    new GF_Entries_Editor_Role_Access();
+	add_action('plugins_loaded', array ('GF_Entries_Editor_Role_Access', 'instance'));
 }
