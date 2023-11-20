@@ -110,5 +110,5 @@ if ( ! class_exists( 'GF_Entries_Editor_Role_Access' ) ) {
 	}
 
 	// instantiate the plugin class
-	add_action('plugins_loaded', array ( new GF_Entries_Editor_Role_Access ));
+	add_action('plugins_loaded', array ('GF_Entries_Editor_Role_Access', 'instance'));
 }
